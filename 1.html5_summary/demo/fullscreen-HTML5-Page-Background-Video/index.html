@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang=en>
+	<head>
+		<title>FullScreen HTML5 Video In Pure CSS</title>
+		<link href="index.css"rel="stylesheet"type="text/css"/>
+		<meta charset=utf-8>
+	</head>
+	<body>
+		<video autoplay loop poster="polina.jpg"id="bgvid">
+			<source src="video/polina.webm"type="video/webm">
+			<source src="video/polina.mp4"type="video/mp4">
+		</video>
+		<div id="polina">
+			<h1>Polina</h1>
+			<p>
+				<a style="display:none;" href="/blog/777/Create-Fullscreen-HTML5-Page-Background-Video">article</a>
+				<button>Pause</button>
+			</p>
+		</div>
+		<script>
+			var video=document.getElementById("bgvid"), 
+				pauseButton=document.querySelector("#polina button");
+			
+			function vidFade() {
+				video.classList.add("stopfade");
+			}
+			video.addEventListener('ended', function() {
+				video.pause();
+				vidFade();
+			}, false);
+			pauseButton.addEventListener("click", function() {
+				video.classList.toggle("stopfade");
+				if(video.paused) {
+					video.play();
+					pauseButton.innerHTML="Pause";
+				}
+				else {
+					video.pause();
+					pauseButton.innerHTML="Paused";
+				}
+			}, false);
+			video.addEventListener('touchstart', function(e) {
+				e.preventDefault();
+				video.play();
+			})
+		</script>
+		</body>
+	</html>

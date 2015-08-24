@@ -1,0 +1,279 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1024" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>HTML5 Summary | HTML5 Training | by ChaiChunyan</title>
+    
+    <meta name="description" content="html5 training" />
+    <meta name="author" content="ChaiChunyan<chaichunyan@msn.com>" />
+
+    <link href="http://fonts.useso.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
+
+    <link href="css/impress.css" rel="stylesheet" />
+    <link href="css/html5-training.css" rel="stylesheet" />
+    
+    <!-- <link rel="shortcut icon" href="favicon.png" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" /> -->
+</head>
+
+<body class="impress-not-supported">
+
+<div class="fallback-message">
+    <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+    <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
+</div>
+
+<!--
+    
+    Now that's the core element used by impress.js.
+    
+    That's the wrapper for your presentation steps. In this element all the impress.js magic happens.
+    It doesn't have to be a `<div>`. Only `id` is important here as that's how the script find it.
+    
+    You probably won't need it now, but there are some configuration options that can be set on this element.
+    
+    To change the duration of the transition between slides use `data-transition-duration="2000"` giving it
+    a number of ms. It defaults to 1000 (1s).
+    
+    You can also control the perspective with `data-perspective="500"` giving it a number of pixels.
+    It defaults to 1000. You can set it to 0 if you don't want any 3D effects.
+    If you are willing to change this value make sure you understand how CSS perspective works:
+    https://developer.mozilla.org/en/CSS/perspective
+    
+    But as I said, you won't need it for now, so don't worry - there are some simple but interesting things
+    right around the corner of this tag ;)
+    
+-->
+<div id="impress">
+
+    <!--
+        
+        Here is where interesting thing start to happen.
+        
+        Each step of the presentation should be an element inside the `#impress` with a class name
+        of `step`. These step elements are positioned, rotated and scaled by impress.js, and
+        the 'camera' shows them on each step of the presentation.
+        
+        Positioning information is passed through data attributes.
+        
+        In the example below we only specify x and y position of the step element with `data-x="-1000"`
+        and `data-y="-1500"` attributes. This means that **the center** of the element (yes, the center)
+        will be positioned in point x = -1000px and y = -1500px of the presentation 'canvas'.
+        
+        It will not be rotated or scaled.
+        
+    -->
+    <div class="step" id="home" data-x="0" data-y="0">
+        <h1>Practical HTML5</h1>
+        <div class="avatar">
+            <div class="img">
+                <img width="200" src="./img/avatar.png" alt="">
+            </div>
+            <div class="info">
+                <span>柴春燕</span>
+                <span>2015-08-15</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="step" id="about" data-x="1500" data-y="0">
+        <div class="title">
+            <span>关于我</span>
+        </div>
+        <div class="works">
+            <ul>
+                <li>
+                    <span>2014-Now</span>
+                    <span>金山云</span>
+                    <span>前端架构师</span>
+                </li>
+                <li>
+                    <span>2012-2014</span>
+                    <span>百度</span>
+                    <span>高级研发工程师</span>
+                </li>
+                <li>
+                    <span>2010-2012</span>
+                    <span>当当网</span>
+                    <span>无线开发工程师</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="what" class="step" data-x="1500" data-y="1000"  data-z="500">
+        <div class="html5-logo">
+            <img src="./img/html5-logo.png" alt="">
+        </div>
+        <div class="question">你真的了解HTML5吗</div>
+    </div>
+
+    <div id="history" class="step" data-x="3000" data-y="1000"  data-z="500">
+        <img width="100%" src="./img/html5-history.png" alt="">
+    </div>
+
+    <div id="hello_html5" class="step" data-x="1500" data-y="2000" data-z="300" data-rotate="30"> 
+        <h3>Hello HTML5</h3>
+        <div><img src="./img/hello-html5.png" alt=""></div>
+    </div>
+
+    <div id="html5-feature" class="step" data-x="1500" data-y="3000" data-rotate="50">
+        <h3>HTML5 特性</h3>
+        <div><img src="./img/html5-feature.png" alt=""></div>
+    </div>
+
+    <div id="html5-more-feature" class="step" data-x="3000" data-y="3000" data-rotate="50">
+        <h3>HTML5 更多特性</h3>
+        <div><img src="./img/html5-more-feature.png" alt=""></div>
+    </div>
+
+    <div id="html5-video" class="step" data-x="4000" data-y="4000" data-rotate="100">
+        <h3>HTML5 Video</h3>
+        <div>
+            <img src="./img/html5-video.png" alt="">
+            <p class="link"> <a target="_blank" href="./demo/fullscreen-HTML5-Page-Background-Video/index.html">Fullscreen HTML5 Page Background Video</a> </p>
+        </div>
+    </div>
+
+    <a style="display:none;" href="http://www.html5tricks.com/cool-html5-3d-animation-pick.html">以下示例均来自http://www.html5tricks.com/</a>
+
+    <div id="html5-canvas" class="step" data-x="5000" data-y="5000">
+        <h3>HTML5 Canvas</h3>
+        <div>
+            <p style="width:100%; text-align: center;"><img width="80%" src="./img/html5-earth.jpg" alt=""></p>
+            <p class="link"> <a target="_blank" href="./demo/html5-earth/index.html">HTML5 3D 旋转地球</a> </p>
+        </div>
+    </div>
+
+    <div id="html5-demo-01" class="step" data-x="5000" data-y="6000">
+        <h3>HTML5 CSS3</h3>
+        <div>
+            <p style="width:100%; text-align: center;"><img width="80%" src="./img/html5-3d-image-gallery.jpg" alt=""></p>
+            <p class="link"> <a target="_blank" href="./demo/html5-3d-image-gallery/index.html">3D立体图片相册</a> </p>
+        </div>
+    </div>
+
+    <div id="html5-demo-02" class="step" data-x="5000" data-y="7000">
+        <h3>HTML5 SVG</h3>
+        <div>
+            <p style="width:100%; text-align: center;"><img width="80%" src="./img/html5-svg-line-chart-colorful.jpg" alt=""></p>
+            <p class="link"> <a target="_blank" href="./demo/html5-svg-line-chart-colorful/index.html">基于HTML5的SVG动画折线图表 线颜色渐变</a> </p>
+        </div>
+    </div>
+
+    <div id="html5-demo-03" class="step" data-x="5000" data-y="8000">
+        <h3>HTML5 Game</h3>
+        <div>
+            <p style="width:100%; text-align: center;"><img width="80%" src="./img/html5-fruit-ninja.jpg" alt=""></p>
+            <p class="link"> <a target="_blank" href="./demo/html5-fruit-ninja/index.html">HTML5版切水果游戏</a> </p>
+        </div>
+    </div>
+
+    <div id="more" class="step" data-x="6500" data-y="8000">
+        <h3>And More ...</h3>
+    </div>
+
+    <div id="start" class="step" data-x="6500" data-y="7000" data-rotate="50">
+        <h3>是不是有些心动<br>Let's Begin!</h3>
+    </div>
+
+<script>
+if ("ontouchstart" in document.documentElement) { 
+    document.querySelector(".hint").innerHTML = "<p>Tap on the left or right to navigate</p>";
+}
+</script>
+
+<!--
+    
+    Last, but not least.
+    
+    To make all described above really work, you need to include impress.js in the page.
+    I strongly encourage to minify it first.
+    
+    In here I just include full source of the script to make it more readable.
+    
+    You also need to call a `impress().init()` function to initialize impress.js presentation.
+    And you should do it in the end of your document. Not only because it's a good practice, but also
+    because it should be done when the whole document is ready.
+    Of course you can wrap it in any kind of "DOM ready" event, but I was too lazy to do so ;)
+    
+-->
+<script src="js/impress.js"></script>
+<script>impress().init();</script>
+
+<!--
+    
+    The `impress()` function also gives you access to the API that controls the presentation.
+    
+    Just store the result of the call:
+    
+        var api = impress();
+    
+    and you will get three functions you can call:
+    
+        `api.init()` - initializes the presentation,
+        `api.next()` - moves to next step of the presentation,
+        `api.prev()` - moves to previous step of the presentation,
+        `api.goto( idx | id | element, [duration] )` - moves the presentation to the step given by its index number
+                id or the DOM element; second parameter can be used to define duration of the transition in ms,
+                but it's optional - if not provided default transition duration for the presentation will be used.
+    
+    You can also simply call `impress()` again to get the API, so `impress().next()` is also allowed.
+    Don't worry, it wont initialize the presentation again.
+    
+    For some example uses of this API check the last part of the source of impress.js where the API
+    is used in event handlers.
+    
+-->
+
+</body>
+</html>
+
+<!--
+    
+    Now you know more or less everything you need to build your first impress.js presentation, but before
+    you start...
+    
+    Oh, you've already cloned the code from GitHub?
+    
+    You have it open in text editor?
+    
+    Stop right there!
+    
+    That's not how you create awesome presentations. This is only a code. Implementation of the idea that
+    first needs to grow in your mind.
+    
+    So if you want to build great presentation take a pencil and piece of paper. And turn off the computer.
+    
+    Sketch, draw and write. Brainstorm your ideas on a paper. Try to build a mind-map of what you'd like
+    to present. It will get you closer and closer to the layout you'll build later with impress.js.
+    
+    Get back to the code only when you have your presentation ready on a paper. It doesn't make sense to do
+    it earlier, because you'll only waste your time fighting with positioning of useless points.
+    
+    If you think I'm crazy, please put your hands on a book called "Presentation Zen". It's all about 
+    creating awesome and engaging presentations.
+    
+    Think about it. 'Cause impress.js may not help you, if you have nothing interesting to say.
+    
+-->
+
+<!--
+    
+    Are you still reading this?
+    
+    For real?
+    
+    I'm impressed! Feel free to let me know that you got that far (I'm @bartaz on Twitter), 'cause I'd like
+    to congratulate you personally :)
+    
+    But you don't have to do it now. Take my advice and take some time off. Make yourself a cup of coffee, tea,
+    or anything you like to drink. And raise a glass for me ;)
+    
+    Cheers!
+    
+-->
+
