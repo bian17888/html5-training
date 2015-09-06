@@ -1,0 +1,708 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>HTML5 Tags Form | HTML5 Training | by ChaiChunyan</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="ChaiChunyan">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/white.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+        <link rel="stylesheet" href="css/html5-training.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>HTML5 Tags Form</h1>
+					<h3></h3>
+					<p>
+						<small>Created by <a href="http://www.chaichunyan.com">ChaiChunyan</a> / <a href="http://weibo.com/chaichunyan">@chaichunyan</a></small>
+					</p>
+				</section>
+
+				<section>
+                    <section>
+                        <h2>HTML5 Tags</h2>
+                    </section>
+                    <section>
+                        <h2>Updating to HTML5</h2>
+                            <h4 class="h-title">In HTML4:</h4>
+                            <pre><code class="html" data-trim contenteditable>
+        &lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" 
+        "http://www.w3.org/TR/html4/strict.dtd"&gt;
+                            </code></pre>
+                            
+                            <h4 class="h-title">In HTML5: 更简洁的代码</h4>
+                            <pre><code class="html">
+        &lt;!DOCTYPE html&gt;
+        &lt;html>
+          <head>
+            <meta charset="UTF-8">
+              <title>HTML5 Training</title>
+          </head>
+        <body>
+        ...
+          </body>
+        &lt;/html&gt;                     
+                            </code></pre>
+                    </section>
+					<section>
+                        <h2>CSS JS 引用</h2>
+                        <h4 class="h-title">CSS</h4>
+                        <pre><code class="html" data-trim contenteditable>
+<link href="demo.css"></link>                            
+                        </code></pre> 
+                        <h4 class="h-title">Javascript</h4>
+                        <pre><code class="html" data-trim contenteditable>
+<script src="demo.js"></script>                            
+                        </code></pre>              
+                    </section>
+				</section>
+
+                <section>
+                    <section>
+                        <h2>HTML5 语义化标签</h2>
+                        <div>
+                            <ul>
+                                <li>header</li>
+                                <li>footer</li>
+                                <li>setion</li>
+                                <li>nav</li>
+                                <li>article</li>
+                                <li>aside</li>
+                            </ul>
+                        </div>
+                        <aside class="notes">
+                            <p>header  定义页面或区段的头部</p>
+                            <p>footer  定义页面或区段的尾部</p>
+                            <p>setion  定义页面的逻辑区域或内容组合</p>
+                            <p>nav     定义页面或区段的导航区域</p>
+                            <p>article 定义正文或一篇完整的内容</p>
+                            <p>aside   定义补充或相关内容</p>
+                        </aside>
+                    </section>
+
+                    <section>
+                        <img src="./img/html4-layout.png" alt="">
+                    </section>
+                    <section>
+                        <img src="./img/html5-layout.png" alt="">
+                    </section>
+                    <section>
+                        <h2>Don't Need Div</h2>
+                        <pre><code class="html" data-trim contenteditable>
+<div id="header"></div> 
+<div class="section"></div> 
+<div class="article"></div> 
+<div id="footer"></div>
+                        </code></pre>
+                    </section>
+                    <section>
+                        <h2>Section</h2>
+                        <pre><code class="html" data-trim contenteditable>
+<article>
+    <hgroup>
+        <h1>Apples</h1>
+        <h2>Tasty, delicious fruit!</h2>
+    </hgroup>
+    <p>The apple is the pomaceous fruit of the apple tree.</p> 
+    <section>
+        <h1>Red Delicious</h1>
+        <p>These bright red apples are the most common found in many supermarkets.</p>
+    </section>
+    <section>
+        <h1>Granny Smith</h1>
+        <p>These juicy, green apples make a great filling for apple pies.</p>
+    </section>
+</article>                            
+                        </code></pre>
+                    </section>
+                    <section>
+                        <h2>Other Example</h2>
+                        <pre><code class="html" data-trim contenteditable>
+<output name="result"></output>
+
+<progress id="p" max=100><span>0</span>%</progress>
+
+<meter value=6 max=8>6 blocks used (out of 8 total) </meter>
+
+Voter turnout: <meter value=0.75><img alt="75%" src="graph75.png"></meter>
+
+Tickets sold: <meter min="0" max="100" value="75"></meter>                            
+                        </code></pre>
+                    </section>
+                    <section>
+                        <h2>Details and Summary</h2>
+                        <pre><code class="html" data-trim contenteditable>
+<details>
+    <summary>
+        Copying... <progress max="375505392" value="97543282"></progress> 25% 
+    </summary>
+    <dl>
+        <dt>Transfer rate:</dt> <dd>452KB/s</dd>
+        <dt>Local filename:</dt> <dd>/home/rpausch/raycd.m4v</dd> 
+    </dl>
+</details>                            
+                        </code></pre>
+                    </section>
+                    <section>
+                        <h2>Address</h2>
+                        <pre><code class="html" data-trim contenteditable>
+<address>
+    <a href="../People/Raggett/">Dave Raggett</A>, 
+    <a href="../People/Arnaud/">Arnaud Le Hors</A>, 
+    contacts for the w3c HTML activity 
+</address>                            
+                        </code></pre>
+                        <p>Address 应用于最近的article或body标签</p>
+                    </section>
+                    <section>
+                        <h2>Data 属性</h2>
+                        <pre><code class="html" data-trim contenteditable>
+<div class="spaceship"data-ship-id="92432"data- weapons="laser 2"data-shields="50%" data-x="30" data- y="10" data-z="90"><button class="fire"></div>
+<script>
+div = document.getElementsByTagName('div')[0]; spaceships[div.dataset.shipId].fire();
+</script>                            
+                        </code></pre>
+                    </section>
+                    <section>
+                        <h2>figure 和 figure 标题</h2>
+                        <pre><code class="html" data-trim contenteditable>
+<figure>
+    <img src="bubbles-work.jpeg" alt="Bubbles, sitting in his office chair, works on his latest project intently."/> 
+    <figcaption>Bubbles at work</figcaption>
+</figure>                            
+                        </code></pre>
+                    </section>
+                    <section>
+                        <h2>Time和发布日期属性</h2>
+                        <pre><code class="html" data-trim contenteditable>
+<time pubdate datetime="2009-10-09T14:28- 08:00"></time>                            
+                        </code></pre>
+                    </section>
+                    <section>
+                        <h2>菜单(menu)和命令(command)</h2>
+                        <pre><code class="html" data-trim contenteditable>
+<menu type="toolbar">
+    <command type="radio" radiogroup="alignment" checked="checked" label="Left" icon="icons/alL.png" onclick="setAlign('left')">
+    <command type="radio" radiogroup="alignment" label="Center" icon="icons/alC.png" onclick="setAlign('center')">
+    <command type="radio" radiogroup="alignment" label="Right" icon="icons/alR.png" onclick="setAlign('right')">
+</menu>                            
+                        </code></pre>
+                    </section>
+                    <section>
+                        <h2>Mark用户高亮的东西</h2>
+                        <pre><code class="html" data-trim contenteditable>
+<p>
+    <mark>Momentum is preserved across the wormhole. Electromagnetic radiation can travel in both directions through a wormhole, but matter cannot.</mark>
+</p>
+                        </code></pre>
+                    </section>
+                    <section>
+                        <h2>Strong用来表示重要</h2>
+                        <pre><code class="html" data-trim contenteditable>
+<p>When a wormhole is created, a vortex normally forms. <strong>Warning: The vortex caused by the wormhole opening will annihilate anything in its path.</strong></p>                            
+                        </code></pre>
+                    </section>
+                    <section>
+                        <h2>需要注意的是</h2>
+                        <h4 class="h-tilte">语义化标签是按需使用的</h4>
+                        <pre><code class="html" data-trim contenteditable>
+并不是所有的导航都要用<nav>
+<nav></nav>只表示主导航,例如底部的nav 
+
+Article是页面的唯一内容
+<article></article>
+
+Hgroup最高级别的头部组 
+<hgroup></hgroup>
+                        </code></pre>
+                    </section>
+                    <section>
+                        <h2>Itemscope 和 Itemprop</h2>
+                        <pre><code class="html" data-trim contenteditable>
+<div itemscope>
+    <p>My name is <span itemprop="name">Elizabeth</span>.</p>
+</div>
+<div itemscope>
+    <p>My name is <span itemprop="name">Daniel</span>.</p> </div>
+<div itemscope>
+    <p>My name is <span itemprop="name">Neil</span>.</p> <p>My band is called <span itemprop="band">Four Parts Water</span>.</p>
+    <p>I am <span itemprop="nationality">British</span>.</p> 
+</div>
+                        </code></pre>
+                    </section>
+
+                    <section>
+                        <h2>But have any question ...</h2>
+                    </section>
+                    <section>
+                        <h2>兼容性</h2>
+                        <pre><code>
+<header><!--header--></header> 
+header{color: red;} IE6、7、8无法渲染。
+                        </code></pre>
+                    </section>
+
+
+                    <section>
+                        <h2>How Do?</h2>
+                    </section>
+                    <section>
+                        <h2>方法一:Coding JavaScript</h2>
+                        <pre><code>
+<!--[if lt IE9]> 
+<script> 
+   (function() {
+     if (! 
+     /*@cc_on!@*/
+     0) return;
+     var e = "abbr, article, aside, audio, canvas, datalist, details, dialog, eventsource, figure, footer, header, hgroup, mark, menu, meter, nav, output, progress, section, time, video".split(', ');
+     var i= e.length;
+     while (i--){
+         document.createElement(e[i])
+     } 
+})() 
+</script>
+<![endif]-->                            
+                        </code></pre>
+                    </section>
+                    <section>
+                        <h2>方法二:使用Google的html5shiv包</h2>
+                        <pre><code>
+<!--[if lt IE9]> 
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+                            
+                        </code></pre>
+                    </section>
+
+                </section>
+
+                <section class="html5-forms">
+                    <section>
+                        <h2>HTML5 Forms</h2>
+                    </section>
+                    <section>
+                        <h2>New HTML5 Input Types</h2>
+                        <img src="./img/1.png" alt="">
+                    </section>
+                    <section>
+                        <img src="./img/2.png" alt="">
+                        <p><a href="https://miketaylr.com/code/input-type-attr.html" target="_blank">Demo</a></p>
+                    </section>
+                    <section>
+                        <h2>New HTML5 Input Attributes</h2>
+                        <img src="./img/3.png" alt="">
+                    </section>
+                    <section>
+                        <h2>Placeholder</h2>
+                        <p class="memo">当用户还没有输入值时,输入型控件可能通过placeholder向用户显示描述性 说明文字或者提示信息</p>
+                        <p><img src="./img/4.png" alt=""></p>
+                    </section>
+
+
+                    <section>
+                        <h2>扩展阅读</h2>
+                        <ul>
+                            <li><a href="http://www.zhangxinxu.com/wordpress/2013/06/%E4%BC%AA%E5%85%83%E7%B4%A0-%E8%A1%A8%E5%8D%95%E6%A0%B7%E5%BC%8F-pseudo-elements-style-form-controls/">伪元素改变表单控件默认样式的完全展示</a></li>
+                            <li><a href="http://fed.renren.com/archives/46">基于vertical-align的表单元素垂直对齐方式研究</a></li>
+                            <li><a href="http://www.ghugo.com/css-to-achieve-input-checkbox-vertical-center/">CSS实现input、checkbox垂直居中</a></li>
+                            <li><a href="http://diveintohtml5.info/forms.html">A form of madness</a></li>
+                            <li><a href="http://webdesign.tutsplus.com/tutorials/bring-your-forms-up-to-date-with-css3-and-html5-validation--webdesign-4738">Bring Your Forms Up to Date With CSS3 and HTML5 Validation</a></li>
+                        </ul>
+                    </section>
+                </section>
+
+
+
+
+
+
+
+
+
+				<!-- Example of nested vertical slides -->
+				<section>
+					<section>
+						<h2>Vertical Slides</h2>
+						<p>Slides can be nested inside of each other.</p>
+						<p>Use the <em>Space</em> key to navigate through all slides.</p>
+						<br>
+						<a href="#" class="navigate-down">
+							<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
+						</a>
+					</section>
+					<section>
+						<h2>Basement Level 1</h2>
+						<p>Nested slides are useful for adding additional detail underneath a high level horizontal slide.</p>
+					</section>
+					<section>
+						<h2>Basement Level 2</h2>
+						<p>That's it, time to go back up.</p>
+						<br>
+						<a href="#/2">
+							<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Up arrow" style="transform: rotate(180deg); -webkit-transform: rotate(180deg);">
+						</a>
+					</section>
+				</section>
+
+				<section>
+					<h2>Slides</h2>
+					<p>
+						Not a coder? Not a problem. There's a fully-featured visual editor for authoring these, try it out at <a href="http://slides.com" target="_blank">http://slides.com</a>.
+					</p>
+				</section>
+
+				<section>
+					<h2>Point of View</h2>
+					<p>
+						Press <strong>ESC</strong> to enter the slide overview.
+					</p>
+					<p>
+						Hold down alt and click on any element to zoom in on it using <a href="http://lab.hakim.se/zoom-js">zoom.js</a>. Alt + click anywhere to zoom back out.
+					</p>
+				</section>
+
+				<section>
+					<h2>Touch Optimized</h2>
+					<p>
+						Presentations look great on touch devices, like mobile phones and tablets. Simply swipe through your slides.
+					</p>
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+						## Markdown support
+
+						Write content using inline or external Markdown.
+						Instructions and more info available in the [readme](https://github.com/hakimel/reveal.js#markdown).
+
+						```
+						<section data-markdown>
+						  ## Markdown support
+
+						  Write content using inline or external Markdown.
+						  Instructions and more info available in the [readme](https://github.com/hakimel/reveal.js#markdown).
+						</section>
+						```
+					</script>
+				</section>
+
+				<section>
+					<section id="fragments">
+						<h2>Fragments</h2>
+						<p>Hit the next arrow...</p>
+						<p class="fragment">... to step through ...</p>
+						<p><span class="fragment">... a</span> <span class="fragment">fragmented</span> <span class="fragment">slide.</span></p>
+
+						<aside class="notes">
+							This slide has fragments which are also stepped through in the notes window.
+						</aside>
+					</section>
+					<section>
+						<h2>Fragment Styles</h2>
+						<p>There's different types of fragments, like:</p>
+						<p class="fragment grow">grow</p>
+						<p class="fragment shrink">shrink</p>
+						<p class="fragment fade-out">fade-out</p>
+						<p class="fragment current-visible">current-visible</p>
+						<p class="fragment highlight-red">highlight-red</p>
+						<p class="fragment highlight-blue">highlight-blue</p>
+					</section>
+				</section>
+
+				<section id="transitions">
+					<h2>Transition Styles</h2>
+					<p>
+						You can select from different transitions, like: <br>
+						<a href="?transition=none#/transitions">None</a> -
+						<a href="?transition=fade#/transitions">Fade</a> -
+						<a href="?transition=slide#/transitions">Slide</a> -
+						<a href="?transition=convex#/transitions">Convex</a> -
+						<a href="?transition=concave#/transitions">Concave</a> -
+						<a href="?transition=zoom#/transitions">Zoom</a>
+					</p>
+				</section>
+
+				<section id="themes">
+					<h2>Themes</h2>
+					<p>
+						reveal.js comes with a few themes built in: <br>
+						<!-- Hacks to swap themes after the page has loaded. Not flexible and only intended for the reveal.js demo deck. -->
+						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/black.css'); return false;">Black (default)</a> -
+						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/white.css'); return false;">White</a> -
+						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/league.css'); return false;">League</a> -
+						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/sky.css'); return false;">Sky</a> -
+						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/beige.css'); return false;">Beige</a> -
+						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/simple.css'); return false;">Simple</a> <br>
+						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/serif.css'); return false;">Serif</a> -
+						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/blood.css'); return false;">Blood</a> -
+						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/night.css'); return false;">Night</a> -
+						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/moon.css'); return false;">Moon</a> -
+						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/solarized.css'); return false;">Solarized</a>
+					</p>
+				</section>
+
+				<section>
+					<section data-background="#dddddd">
+						<h2>Slide Backgrounds</h2>
+						<p>
+							Set <code>data-background="#dddddd"</code> on a slide to change the background color. All CSS color formats are supported.
+						</p>
+						<a href="#" class="navigate-down">
+							<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
+						</a>
+					</section>
+					<section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/image-placeholder.png">
+						<h2>Image Backgrounds</h2>
+						<pre><code>&lt;section data-background="image.png"&gt;</code></pre>
+					</section>
+					<section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/image-placeholder.png" data-background-repeat="repeat" data-background-size="100px">
+						<h2>Tiled Backgrounds</h2>
+						<pre><code style="word-wrap: break-word;">&lt;section data-background="image.png" data-background-repeat="repeat" data-background-size="100px"&gt;</code></pre>
+					</section>
+					<section data-background-video="https://s3.amazonaws.com/static.slid.es/site/homepage/v1/homepage-video-editor.mp4,https://s3.amazonaws.com/static.slid.es/site/homepage/v1/homepage-video-editor.webm" data-background-color="#000000">
+						<div style="background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px;">
+							<h2>Video Backgrounds</h2>
+							<pre><code style="word-wrap: break-word;">&lt;section data-background-video="video.mp4,video.webm"&gt;</code></pre>
+						</div>
+					</section>
+					<section data-background="http://i.giphy.com/90F8aUepslB84.gif">
+						<h2>... and GIFs!</h2>
+					</section>
+				</section>
+
+				<section data-transition="slide" data-background="#4d7e65" data-background-transition="zoom">
+					<h2>Background Transitions</h2>
+					<p>
+						Different background transitions are available via the backgroundTransition option. This one's called "zoom".
+					</p>
+					<pre><code>Reveal.configure({ backgroundTransition: 'zoom' })</code></pre>
+				</section>
+
+				<section data-transition="slide" data-background="#b5533c" data-background-transition="zoom">
+					<h2>Background Transitions</h2>
+					<p>
+						You can override background transitions per-slide.
+					</p>
+					<pre><code style="word-wrap: break-word;">&lt;section data-background-transition="zoom"&gt;</code></pre>
+				</section>
+
+				<section>
+					<h2>Pretty Code</h2>
+					<pre><code data-trim contenteditable>
+function linkify( selector ) {
+  if( supports3DTransforms ) {
+
+    var nodes = document.querySelectorAll( selector );
+
+    for( var i = 0, len = nodes.length; i &lt; len; i++ ) {
+      var node = nodes[i];
+
+      if( !node.className ) {
+        node.className += ' roll';
+      }
+    }
+  }
+}
+					</code></pre>
+					<p>Code syntax highlighting courtesy of <a href="http://softwaremaniacs.org/soft/highlight/en/description/">highlight.js</a>.</p>
+				</section>
+
+				<section>
+					<h2>Marvelous List</h2>
+					<ul>
+						<li>No order here</li>
+						<li>Or here</li>
+						<li>Or here</li>
+						<li>Or here</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Fantastic Ordered List</h2>
+					<ol>
+						<li>One is smaller than...</li>
+						<li>Two is smaller than...</li>
+						<li>Three!</li>
+					</ol>
+				</section>
+
+				<section>
+					<h2>Tabular Tables</h2>
+					<table>
+						<thead>
+							<tr>
+								<th>Item</th>
+								<th>Value</th>
+								<th>Quantity</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Apples</td>
+								<td>$1</td>
+								<td>7</td>
+							</tr>
+							<tr>
+								<td>Lemonade</td>
+								<td>$2</td>
+								<td>18</td>
+							</tr>
+							<tr>
+								<td>Bread</td>
+								<td>$3</td>
+								<td>2</td>
+							</tr>
+						</tbody>
+					</table>
+				</section>
+
+				<section>
+					<h2>Clever Quotes</h2>
+					<p>
+						These guys come in two forms, inline: <q cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
+						&ldquo;The nice thing about standards is that there are so many to choose from&rdquo;</q> and block:
+					</p>
+					<blockquote cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
+						&ldquo;For years there has been a theory that millions of monkeys typing at random on millions of typewriters would
+						reproduce the entire works of Shakespeare. The Internet has proven this theory to be untrue.&rdquo;
+					</blockquote>
+				</section>
+
+				<section>
+					<h2>Intergalactic Interconnections</h2>
+					<p>
+						You can link between slides internally,
+						<a href="#/2/3">like this</a>.
+					</p>
+				</section>
+
+				<section>
+					<h2>Speaker View</h2>
+					<p>There's a <a href="https://github.com/hakimel/reveal.js#speaker-notes">speaker view</a>. It includes a timer, preview of the upcoming slide as well as your speaker notes.</p>
+					<p>Press the <em>S</em> key to try it out.</p>
+
+					<aside class="notes">
+						Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
+					</aside>
+				</section>
+
+				<section>
+					<h2>Export to PDF</h2>
+					<p>Presentations can be <a href="https://github.com/hakimel/reveal.js#pdf-export">exported to PDF</a>, here's an example:</p>
+					<iframe src="//www.slideshare.net/slideshow/embed_code/42840540" width="445" height="355" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:3px solid #666; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe>
+				</section>
+
+				<section>
+					<h2>Global State</h2>
+					<p>
+						Set <code>data-state="something"</code> on a slide and <code>"something"</code>
+						will be added as a class to the document element when the slide is open. This lets you
+						apply broader style changes, like switching the page background.
+					</p>
+				</section>
+
+				<section data-state="customevent">
+					<h2>State Events</h2>
+					<p>
+						Additionally custom events can be triggered on a per slide basis by binding to the <code>data-state</code> name.
+					</p>
+					<pre><code class="javascript" data-trim contenteditable style="font-size: 18px;">
+Reveal.addEventListener( 'customevent', function() {
+	console.log( '"customevent" has fired' );
+} );
+					</code></pre>
+				</section>
+
+				<section>
+					<h2>Take a Moment</h2>
+					<p>
+						Press B or . on your keyboard to pause the presentation. This is helpful when you're on stage and want to take distracting slides off the screen.
+					</p>
+				</section>
+
+				<section>
+					<h2>Much more</h2>
+					<ul>
+						<li>Right-to-left support</li>
+						<li><a href="https://github.com/hakimel/reveal.js#api">Extensive JavaScript API</a></li>
+						<li><a href="https://github.com/hakimel/reveal.js#auto-sliding">Auto-progression</a></li>
+						<li><a href="https://github.com/hakimel/reveal.js#parallax-background">Parallax backgrounds</a></li>
+						<li><a href="https://github.com/hakimel/reveal.js#keyboard-bindings">Custom keyboard bindings</a></li>
+					</ul>
+				</section>
+
+				<section style="text-align: left;">
+					<h1>THE END</h1>
+					<p>
+						- <a href="http://slides.com">Try the online editor</a> <br>
+						- <a href="https://github.com/hakimel/reveal.js">Source code &amp; documentation</a>
+					</p>
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
