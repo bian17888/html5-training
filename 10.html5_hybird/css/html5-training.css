@@ -1,0 +1,11 @@
+section .h-title {
+  text-align: left;
+  width: 90%;
+  margin: 20px auto;
+}
+.reveal .html5-hybird img {
+  border: 0 none;
+}
+.reveal .html5-hybird p.memo {
+  text-align: left;
+}
