@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>CSS3 | HTML5 Training | by ChaiChunyan</title>
+    <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+    <meta name="author" content="ChaiChunyan">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/white.css" id="theme">
+    <!-- Code syntax highlighting -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+    <link rel="stylesheet" href="css/html5-training.css">
+    <!-- Printing and PDF exports -->
+    <script>
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+    document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
+    <!--[if lt IE 9]>
+        <script src="lib/js/html5shiv.js"></script>
+        <![endif]-->
+</head>
+
+<body>
+    <div class="reveal">
+        <!-- Any section element inside of this container is displayed as a slide -->
+        <div class="slides">
+            <section>
+                <h1>CSS3</h1>
+                <p>
+                    <small>Created by <a href="http://www.chaichunyan.com">ChaiChunyan</a> / <a href="http://weibo.com/chaichunyan">@chaichunyan</a></small>
+                </p>
+            </section>
+
+            <!-- CSS3 -->
+            <section>
+                <section>
+                    <h2>CSS3 与 CSS2</h2>
+                    <p>CSS3是CSS技术的升级版本，CSS3语言开发是朝着模块化发展的。以前的规范作为一个模块实在是太庞大而且比较复杂，所以，把它分解为一些小的模块，更多新的模块也被加入进来。这些模块包括： 盒子模型、列表模块、超链接方式 、语言模块 、背景和边框 、文字特效 、多栏布局等。</p>
+                </section>
+            </section>
+            <!-- CSS3 兼容性 -->
+            <section>
+                <section>
+                    <h2>CSS3 兼容性</h2>
+                </section>
+                <section>
+                    <h2>兼容性列表</h2>
+                    <p><img src="img/1.png" height="578" width="1301"></p>
+                </section>
+                <section>
+                    <h2>各属性浏览器支持度查询</h2>
+                    <p><a href="http://caniuse.com/" target="_blank">查询网站 : caniuse</a></p>
+                </section>
+            </section>
+            <!-- CSS3 常用属性 -->
+            <section>
+                <section>
+                    <h2>CSS3 常用属性</h2>
+                </section>
+                <section>
+                    <h2>常用属性列表</h2>
+                    <ul>
+                        <li>选择器</li>
+                        <li>自定义字体</li>
+                        <li>多栏布局</li>
+                        <li>文字,容器阴影</li>
+                        <li>圆角</li>
+                        <li>渐变效果</li>
+                        <li>多背景图</li>
+                        <li>翻转</li>
+                        <li>动画</li>
+                        <li>......</li>
+                    </ul>
+                </section>
+                <section>
+                    <h2>一个 Demo 来说明</h2>
+                    <p><a href="demos/index.html" target="_blank">Experimenting with CSS3
+</a></p>
+                </section>
+            </section>
+        </div>
+    </div>
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+    <script>
+    // Full list of configuration options available at:
+    // https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+
+        transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+        // Optional reveal.js plugins
+        dependencies: [{
+            src: 'lib/js/classList.js',
+            condition: function() {
+                return !document.body.classList;
+            }
+        }, {
+            src: 'plugin/markdown/marked.js',
+            condition: function() {
+                return !!document.querySelector('[data-markdown]');
+            }
+        }, {
+            src: 'plugin/markdown/markdown.js',
+            condition: function() {
+                return !!document.querySelector('[data-markdown]');
+            }
+        }, {
+            src: 'plugin/highlight/highlight.js',
+            async: true,
+            condition: function() {
+                return !!document.querySelector('pre code');
+            },
+            callback: function() {
+                hljs.initHighlightingOnLoad();
+            }
+        }, {
+            src: 'plugin/zoom-js/zoom.js',
+            async: true
+        }, {
+            src: 'plugin/notes/notes.js',
+            async: true
+        }]
+    });
+    </script>
+</body>
+
+</html>
