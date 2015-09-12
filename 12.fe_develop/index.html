@@ -37,52 +37,134 @@
                     <small>Created by <a href="http://www.chaichunyan.com">ChaiChunyan</a> / <a href="http://weibo.com/chaichunyan">@chaichunyan</a></small>
                 </p>
             </section>
-
-            <!-- 前端工程化的一些心得 -->
+            <!-- 前后端分离 -->
             <section>
                 <section>
-                    <h2>CSS3 与 CSS2</h2>
-                    <p style="text-align:left">CSS3是CSS技术的升级版本，CSS3语言开发是朝着模块化发展的。以前的规范作为一个模块实在是太庞大而且比较复杂，所以，把它分解为一些小的模块，更多新的模块也被加入进来。这些模块包括： 盒子模型、列表模块、超链接方式 、语言模块 、背景和边框 、文字特效 、多栏布局等。</p>
-                </section>
-            </section>
-            <!-- CSS3 兼容性 -->
-            <section>
-                <section>
-                    <h2>CSS3 兼容性</h2>
+                    <h2>前后端分离</h2>
                 </section>
                 <section>
-                    <h2>兼容性列表</h2>
-                    <p><img src="img/1.png" height="578" width="1301"></p>
-                </section>
-                <section>
-                    <h2>各属性浏览器支持度查询</h2>
-                    <p><a href="http://caniuse.com/" target="_blank">查询网站 : caniuse</a></p>
-                </section>
-            </section>
-            <!-- CSS3 常用属性 -->
-            <section>
-                <section>
-                    <h2>CSS3 常用属性</h2>
-                </section>
-                <section>
-                    <h2>常用属性列表</h2>
+                    <h2>为什么要前后端分离</h2>
                     <ul>
-                        <li>选择器</li>
-                        <li>自定义字体</li>
-                        <li>多栏布局</li>
-                        <li>文字,容器阴影</li>
-                        <li>圆角</li>
-                        <li>渐变效果</li>
-                        <li>多背景图</li>
-                        <li>翻转</li>
-                        <li>动画</li>
-                        <li>......</li>
+                        <li>前后端职责不清</li>
+                        <li>开发效率问题</li>
+                        <li>对前端发挥的局限</li>
                     </ul>
                 </section>
                 <section>
-                    <h2>一个 Demo 来说明</h2>
-                    <p><a href="demos/index.html" target="_blank">Experimenting with CSS3
-</a></p>
+                    <h2>前后端分离</h2>
+                    <p>前端：负责View和Controller层。
+                        <br/>后端：只负责Model层，业务处理/数据等。</p>
+                    <p><img src="img/1.png" height="80%" width="80%"></p>
+                </section>
+                <section>
+                    <p><img src="img/2.png" height="60%" width="60%"></p>
+                </section>
+                <section>
+                    <h2>性能问题</h2>
+                    <p style="text-align:left">分层就涉及每层之间的通讯，肯定会有一定的性能损耗。但是合理的分层能让职责清晰、也方便协作，会大大提高开发效率。分层带来的损失，一定能在其他方面的收益弥补回来。</p>
+                    <p style="text-align:left">另外，一旦决定分层，我们可以通过优化通讯方式、通讯协议，尽可能把损耗降到最低。</p>
+                </section>
+                <section>
+                    <h2>我们是怎么做前后端分离的</h2>
+                </section>
+            </section>
+            <!-- 前端自动化（Gulp） -->
+            <section>
+                <section>
+                    <h2>前端自动化（Gulp）</h2>
+                </section>
+                <section>
+                    <h2>gulp 是什么</h2>
+                    <p>基于文件流的构建系统</p>
+                    <p><a href="http://gulpjs.com/" target="_blank">官网</a></p>
+                </section>
+                <section>
+                    <h2>为什么要使用 gulp </h2>
+                </section>
+                <section>
+                    <h2>现实中,我们有很多重复工作</h2>
+                    <p><img src="img/3.png"></p>
+                </section>
+                <section>
+                    <h2>So...</h2>
+                    <p><img src="img/4.png"></p>
+                </section>
+                <section>
+                    <h2>Gulp vs Grunt</h2>
+                    <p><img src="img/5.png"></p>
+                </section>
+                <section>
+                    <h2>Only 4 Simple APIs</h2>
+                    <p><img src="img/6.png"></p>
+                </section>
+                <section>
+                    <h2>更多gulp细节</h2>
+                    <p><a href="http://gulpjs.com/" target="_blank">详见官网 : GulpJs.com</a></p>
+                </section>
+            </section>
+            <!-- 前端性能优化 -->
+            <section>
+                <section>
+                    <h2>前端性能优化</h2>
+                </section>
+                <section>
+                    <h2>一、内容部分</h2>
+                    <ul>
+                        <li>尽量减少 HTTP 请求次数</li>
+                        <li>减少DNS查找次数</li>
+                        <li>避免跳转</li>
+                        <li>可缓存的 AJAX</li>
+                        <li>推迟加载内容</li>
+                        <li>预加载</li>
+                        <li>减少DOM元素数量</li>
+                        <li>根据域名划分页面内容</li>
+                        <li>使 iframe 的数量最小</li>
+                        <li>不要出现 404 错误</li>
+                    </ul>
+                </section>
+                <section>
+                    <h2>二、服务器端</h2>
+                    <ul>
+                        <li>使用内容分发网络</li>
+                        <li>为文件头指定Expires或Cache-Control</li>
+                        <li>Gzip压缩文件内容</li>
+                        <li>配置ETag</li>
+                        <li>尽早刷新输出缓冲</li>
+                        <li>使用GET来完成AJAX请求</li>
+                    </ul>
+                </section>
+                <section>
+                    <h2>三、JavaScript 和 CSS</h2>
+                    <ul>
+                        <li>把样式表置于顶部</li>
+                        <li>避免使用CSS表达式(Expression)</li>
+                        <li>使用外部JavaScript和CSS</li>
+                        <li>削减JavaScript和CSS</li>
+                        <li>用代替@import</li>
+                        <li>避免使用滤镜</li>
+                        <li>把脚本置于页面底部</li>
+                        <li>剔除重复脚本</li>
+                        <li>减少 DOM 访问</li>
+                        <li>开发智能事件处理程序</li>
+                    </ul>
+                </section>
+                <section>
+                    <h2>四、Cookie,图片及移动应用</h2>
+                    <ul>
+                        <li>减小Cookie体积</li>
+                        <li>对于页面内容使用无coockie域名</li>
+                        <li>优化图像</li>
+                        <li>优化 CSS Spirite</li>
+                        <li>不要在 HTML 中缩放图像</li>
+                        <li>favicon.ico 要小而且可缓存</li>
+                        <li>保持单个内容小于 25K</li>
+                        <li>打包组件成复合文本</li>
+                    </ul>
+                </section>
+                <section>
+                    <h2>更多优化建议</h2>
+                    <p><a href="https://developers.google.com/speed/docs/insights/rules?csw=1" target="_blank">Google : PageSpeed Insights规则</a></p>
+                    <p><a href="https://developer.yahoo.com/performance/rules.html" target="_blank">Yahoo : Best Practices for Speeding Up Your Web Site</a></p>
                 </section>
             </section>
         </div>
